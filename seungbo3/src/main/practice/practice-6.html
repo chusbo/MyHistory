@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const rects = document.querySelectorAll('.rect');
+			
+			rects.forEach((rect, index) => {
+				const width = (index + 1) * 100;
+				const height = 250; 
+				const src = `https://cdn.pixabay.com/photo/2024/04/06/03/52/ai-generated-8678560_1280.jpg?width=${width}&height=${height}`;
+				rect.setAttribute('src', src);
+				rect.style.width = `${width}px`; 
+				rect.style.height = `${height}px`; 
+			});
+		});
+	</script>
+</head>
+<body>
+	<img class="rect">
+	<img class="rect">
+	<img class="rect">
+	<img class="rect">
+</body>
+</html>

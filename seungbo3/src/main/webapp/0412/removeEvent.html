@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded',()=>
+		{let counter =0
+		let isConnect=false
+		
+		const hh=document.querySelector('h1')
+		const pp=document.querySelector('p')
+		const connect=document.querySelector('#connect')
+		const disconnect=document.querySelector('#disconnect')
+		
+		const listener=(event)=>
+			{hh.textContent=`클릭 횟수:${counter++}`}
+		
+		connect.addEventListener('click',()=>
+		 {if(isConnect===false)
+			{hh.addEventListener('click',listener)
+			pp.textContent='이벤트 연결 상태:연결'
+			isConnect=true}	 
+		 })	
+		disconnect.addEventListener('click',()=>
+		{if(isConnect===true)
+			{hh.removeEventListener('click',listener)
+			pp.textContent='이벤트 연결 상태:해제'
+			isConnect=false}
+		})		 
+		})
+	</script>
+	
+	<style>
+	div
+	{border:1px dotted gray;width:300px;}
+	
+	h1,p
+	{user-select:none; text-align:center;}
+	button
+	{margin-left:40px;}
+	</style>
+</head>
+<body>
+<div>
+	<h1>클릭 횟수:0</h1>
+	<button id="connect">이벤트 연결</button>
+	<button id="disconnect">이벤트 제거</button>
+	<p>이벤트 연결 상태:해제</p>
+</div>
+</body>
+</html>

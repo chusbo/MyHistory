@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style>
+		*{margin:0; padding:0; box-sizing:boder-box;}
+		#container
+			{width:100%}
+		header
+			{width:100%}
+		header h1
+			{font-size:3em; text-align:center;}
+		#menus
+			{width:100%}
+		#menus >div
+			{position:relative; height:200px; border:1px solid black;}
+		#menu1, #menu2, #menu3, #menu4, #menu5
+			{width:100%}
+		#menus h2
+			{width:100%; padding:5px; font-size:2em; color:white; text-shadow:3px 3px 5px black; right:3%; bottom:10px; border:1px solid gray;}
+		#menu1
+			{background:url("../images/food1.png") no-repeat center; background-size:cover;}
+		#menu2
+			{background:url("../images/food2.jpg") no-repeat center; background-size:cover;}
+		#menu3
+			{background:url("../images/food3.jpg") no-repeat center; background-size:cover;}
+		#menu4
+			{background:url("../images/food4.jpg") no-repeat center; background-size:cover;}
+		#menu5
+			{background:url("../images/food5.jpg") no-repeat center; background-size:cover;}
+		footer
+			{width:100%; 
+			background:#373737; 
+			height:200px;}
+		footer P
+			{font-size:1.2em; 
+			color:#eee; 
+			text-align:center; 
+			line-height:200px;}		
+	
+		#menu1 {order:1;}
+		#h1{order:4;}
+		#menu2{order:2;}
+		#h2{order:5;}
+		#menu3 {order:3;}
+		#h3{order:6;}
+		#menu4{order:7;}
+		#h4{order:9;}
+		#menu5{order:8;}
+		#h5{order:10;}	
+				
+		@media all and (min-width:768px){
+			#menus
+				{display:flex;
+				flex-wrap:wrap; 
+				justify-content:space-between;}
+			#menu1, #menu2, #menu3, #menu4
+				{width:49%}
+			#menu5
+				{width:100%}}
+			
+		@media all and (min-width:992px){
+			#menu1, #menu2, #menu3, #menu4, #menu5, #h1, #h2, #h3, #h4, #h5
+				{display:flex; flex-wrap:wrap; width:33%}
+			#menu5
+				{margin-left:0.5%;
+				flex:2 2 0;}}			
+		.p
+		{width:100px; height:50px;}
+
+		</style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>솔로의 식탁</h1>
+		</header>
+		<section id="menus">
+			<div id="menu1"></div>
+				<div id="h1"><h2>밥/죽</h2></div>
+			<div id="menu2"></div>
+				<div id="h2"><h2>국/찌개</h2></div>
+			<div id="menu3"></div>
+				<div id="h3"><h2>반찬</h2></div>
+			<div id="menu4"></div>
+				<div id="h4"><h2>일품요리</h2></div>
+			<div id="menu5"></div>
+				<div id="h5"><h2>음료/칵테일</h2></div>
+		</section>
+		<section id="notice">
+		</section>
+	<footer><p>푸터</p></footer>
+	</div>
+</body>
+</html>

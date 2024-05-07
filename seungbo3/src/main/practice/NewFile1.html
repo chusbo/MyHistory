@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성적 관리 프로그램</title>
+    <script>
+        class Student {
+            constructor(kor, eng, math, csi) {
+                this.kor = kor;
+                this.eng = eng;
+                this.math = math;
+                this.csi = csi;
+            }
+
+            getSum() {
+                return this.kor + this.eng + this.math + this.csi;
+            }
+
+            getAverage() {
+                return this.getSum() / 4;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameInput = document.querySelector('#name');
+            const korInput = document.querySelector('#kor');
+            const engInput = document.querySelector('#eng');
+            const mathInput = document.querySelector('#math');
+            const csiInput = document.querySelector('#csi');
+            const sumOutput = document.querySelector('.sum');
+            const aveOutput = document.querySelector('.ave');
+            const outputFieldset = document.querySelector('.output-fieldset');
+
+            nameInput.addEventListener('keyup', updateDisplay);
+            korInput.addEventListener('keyup', updateDisplay);
+            engInput.addEventListener('keyup', updateDisplay);
+            mathInput.addEventListener('keyup', updateDisplay);
+            csiInput.addEventListener('keyup', updateDisplay);
+
+            function updateDisplay() {
+                const name = nameInput.value;
+                const kor = parseFloat(korInput.value) || 0;
+                const eng = parseFloat(engInput.value) || 0;
+                const math = parseFloat(mathInput.value) || 0;
+                const csi = parseFloat(csiInput.value) || 0;
+
+                const student = new Student(kor, eng, math, csi);
+
+                document.querySelector('.name').textContent = name;
+                document.querySelector('.kor').textContent = `${kor}점`;
+                document.querySelector('.eng').textContent = `${eng}점`;
+                document.querySelector('.math').textContent = `${math}점`;
+                document.querySelector('.csi').textContent = `${csi}점`;
+                sumOutput.textContent = `${student.getSum()}점`;
+                aveOutput.textContent = `${student.getAverage()}점`;
+            }
+
+            // 추가된 부분: 출력 버튼 처리
+            const printButton = document.querySelector('#printButton');
+            printButton.addEventListener('click', () => {
+                outputFieldset.style.display = 'block';
+                updateDisplay();
+            });
+        });
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>성적관리 프로그램</legend>
+        <p>이름 : <input type="text" id="name"></p>
+        <p>국어점수 : <input type="number" min="0" max="100" id="kor"></p>
+        <p>영어점수 : <input type="number" min="0" max="100" id="eng"></p>
+        <p>수학점수 : <input type="number" min="0" max="100" id="math"></p>
+        <p>과학점수 : <input type="number" min="0" max="100" id="csi"></p>
+        <!-- 버튼 추가 -->
+        <button id="printButton">출력</button>
+    </fieldset>
+    <!-- 추가된 부분: 결과를 보여줄 fieldset -->
+    <fieldset class="output-fieldset" style="display: none;">
+        <legend>출력</legend>
+        <p>이름 : <b><span class="name"></span></b></p>
+        <p>국어점수 : <b><span class="kor"></span></b></p>
+        <p>영어점수 : <b><span class="eng"></span></b></p>
+        <p>수학점수 : <b><span class="math"></span></b></p>
+        <p>과학점수 : <b><span class="csi"></span></b></p>
+        <p>총합점수 : <b><span class="sum"></span></b></p>
+        <p>평균점수 : <b><span class="ave"></span></b></p>
+    </fieldset>
+</body>
+</html>

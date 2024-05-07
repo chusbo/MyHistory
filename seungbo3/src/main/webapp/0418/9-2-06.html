@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		class Sqare
+			{#length
+			
+			constructor(length)
+				{if(length<=0)
+					{throw'길이는0보다 커야 합니다.'}	
+				this.length=length
+				}			
+		getPerimeter(){return 4*this.length}
+		getArea(){return this.length*this.length}
+			}
+		
+		const sqare=new Sqare(10)
+		console.log(`정사각형의 둘레:${sqare.getPerimeter()}`)
+		console.log(`정사각형의 넓이:${sqare.getArea()}`)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

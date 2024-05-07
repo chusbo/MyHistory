@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded',()=>
+			{const imgs=document.querySelectorAll('img')
+			
+			imgs.forEach((img)=>
+			{img.addEventListener('contextmenu',(event)=>
+				{event.preventDefault()})				
+			})
+			})
+	</script>
+</head>
+<body>
+	<img src="../images/bread1.png" alt="빵1">
+	<img src="../images/bread2.jpg" alt="빵2">
+	<img src="../images/bread3.png" alt="빵3">
+	<img src="../images/bread4.png" alt="빵4">
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style>
+	ul
+		{list-style:none;}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>회원 정보 입력</legend>
+				<ul>
+					<li><label>이름 : <input type="text" placeholder="이름을 입력해주세요" name="이름" id="이름" required></label></li>
+					<li><label>아이디 : <input type="text" placeholder="아이디를 입력해주세요" name="아이디" id="아이디" required></label></li>
+					<li><label>패스워드 : <input type="password" placeholder="패스워드를 입력해주세요" name="비밀번호" id="비밀번호" required></label></li>
+					<li><label>이메일 : <input type="email" placeholder="abc@abcde.com" name="이메일" id="이메일" required></label></li>
+					<li><label>나이 : <input type="number" name="나이" id="나이" min="1" max="100" required>세</label></li>
+					<li><label>성별 : 남 <input type="radio" name="radio"> 여 : <input type="radio" name="radio"></label></li>
+					<li><label>코딩실력 : <input type="range" min="1" max="3"></label></li>
+					<li><label>취미 : <br>
+								음악감상<input type="checkbox" name="hobby">독서<input type="checkbox" name="hobby">게임<input type="checkbox" name="hobby"></label></li>
+					<li><label>하고싶은말 : <textarea cols="40" rows="5"></textarea></label></li>
+					
+					<input type="submit" value="회원가입">
+					<input type="reset" value="초기화">
+						
+				</ul>
+		</fieldset>
+	</form>
+</body>
+</html>

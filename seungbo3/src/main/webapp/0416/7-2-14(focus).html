@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded',()=>
+			{const textarea=document.querySelector('textarea')
+			const h1=document.querySelector('h1')
+			let timerid
+			
+			textarea.addEventListener('focus',(event)=>
+				{timerid=setInterval(()=>
+				{const length=textarea.value.length
+					h1.textContent=`글자 수:${length}`
+					},50)				
+				})
+			textarea.addEventListener('blur',(event)=>
+				{clearInterval(timerid)})
+			})
+		
+	</script>
+</head>
+<body>
+	<h1></h1>
+	<textarea></textarea>
+</body>
+</html>

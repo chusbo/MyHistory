@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Numbers</title>
+</head>
+<body>
+  <h1>Random Numbers</h1>
+  <button onclick="generateRandomNumbers()">Generate Numbers</button>
+  <p id="randomNumbers"></p>
+
+  <script>
+    function generateRandomNumbers() {
+      var numbers = [];
+
+      // 중복되지 않는 랜덤 숫자 생성
+      while (numbers.length < 6) {
+        var randomNumber = Math.floor(Math.random() * 45) + 1;
+        if (!numbers.includes(randomNumber)) {
+          numbers.push(randomNumber);
+        }
+      }
+
+      // 생성된 숫자를 오름차순으로 정렬
+      numbers.sort(function(a, b) {
+        return a - b;
+      });
+
+      // 생성된 숫자를 화면에 표시
+      document.getElementById("randomNumbers").innerHTML = "Random Numbers: " + numbers.join(", ");
+    }
+  </script>
+</body>
+</html>

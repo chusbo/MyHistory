@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Length Converter</title>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ratios = {
+    mm: 10,
+    cm: 1,
+    m: 0.01,
+    inch: 0.393701 // 1 inch = 2.54 cm, 이것을 1 inch = 0.393701 cm로 수정해야 합니다.
+  };
+
+  const calculate = (input, output, select) => {
+    const inputValue = parseFloat(input.value);
+    const ratio = ratios[select.value];
+    output.textContent = (inputValue * ratio).toFixed(2);
+  };
+
+  const initializeConverter = (input, output, select) => {
+    input.addEventListener('input', () => calculate(input, output, select));
+    select.addEventListener('change', () => calculate(input, output, select));
+  };
+
+  initializeConverter(
+    document.querySelector('#input1'),
+    document.querySelector('#span1'),
+    document.querySelector('#select1')
+  );
+
+  initializeConverter(
+    document.querySelector('#input2'),
+    document.querySelector('#span2'),
+    document.querySelector('#select2')
+  );
+});
+</script>
+</head>
+<body>
+<input type="text" id="input1"> cm = <span id="span1"></span>
+<select id="select1">
+  <option value="mm">mm</option>
+  <option value="cm" selected>cm</option>
+  <option value="m">m</option>
+  <option value="inch">inch</option>
+</select>
+<br>
+<input type="text" id="input2"> inch = <span id="span2"></span>
+<select id="select2">
+  <option value="mm">mm</option>
+  <option value="cm">cm</option>
+  <option value="m">m</option>
+  <option value="inch" selected>inch</option>
+</select>
+</body>
+</html>

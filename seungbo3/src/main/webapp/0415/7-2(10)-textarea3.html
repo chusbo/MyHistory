@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		const listener=function(event)
+			{const length=this.value.length
+			h1.textContent=`글자 수:${length}`}
+		
+		document.addEventListener('DOMContentLoaded',()=>
+			{const textarea=document.querySelector('textarea')
+			const h1=document.querySelector('h1')
+			textarea.addEventListener('keyup',listener)					
+		})
+	</script>
+	<style>
+		textarea
+		 {border:1px dotted gray; font-size:20px;}
+	</style>
+	
+</head>
+<body>
+	<h1></h1>
+	<textarea></textarea>
+</body>
+</html>

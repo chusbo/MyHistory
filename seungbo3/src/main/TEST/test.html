@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => 
+			{const name1=document.querySelector('#name')
+		    const name2=document.querySelector('.name')
+
+		    name1.addEventListener('keyup', (event) => {
+	        const name3=event.currentTarget.value
+	        name2.textContent = name3
+	        name2.style.color='green'
+		    })
+		})
+		document.addEventListener('DOMContentLoaded',()=>
+			{const mail=document.querySelector('#mail')
+			const mail2=document.querySelector('.mail')
+			const isEmail=(value)=>
+			{return(value.indexOf('@')>1)
+			&&(value.split('@')[1].indexOf('.')>1)}
+		
+		mail.addEventListener('keyup',(event)=>
+			{const value=event.currentTarget.value
+			if(isEmail(value))
+			{mail2.style.color='green'
+			mail2.textContent=`${value}`}
+			else
+			{mail2.style.color='red'
+			mail2.textContent=`${value}(올바르지 않습니다.)`}
+		})			
+	})//이메일
+		document.addEventListener('DOMContentLoaded',()=>
+			{const class1=document.querySelector('#class')
+			const class2=document.querySelector('.class')
+			
+			class1.addEventListener('change',(event)=>
+				{const options=event.currentTarget.options
+				const index=event.currentTarget.options.selectedIndex
+				
+			class2.textContent=`${options[index].textContent}`
+			class2.style.color='green'
+		})
+	})//최종학력
+		document.addEventListener('DOMContentLoaded',()=>
+			{const pet=document.querySelector('#pet')
+			const radios=document.querySelectorAll('[name=pet]')
+			
+			radios.forEach((radio)=>
+				{radio.addEventListener('change',(event)=>
+					{const current=event.currentTarget
+						if(current.checked)
+						{pet.textContent=`${current.value}`
+						pet.style.color='green'}
+					})
+				})
+			})//애완동물
+		document.addEventListener('DOMContentLoaded', () => {
+    		const food = document.querySelector('#food')
+    		const checkboxes = document.querySelectorAll('[name^=check]')
+
+    		checkboxes.forEach((checkbox) => {
+        	checkbox.addEventListener('change', () => {
+	            let selectedFoods = []
+    	        checkboxes.forEach((checkbox) => {
+        	        if (checkbox.checked) {
+                    selectedFoods.push(checkbox.value)}
+            	})
+            food.textContent = `${selectedFoods.join(', ')}`
+            food.style.color='green'
+            })
+    })
+})//음식 스타일
+	</script>
+	<style>
+		#main
+		{border:2px solid black;}
+		fieldset
+		{border:2px dotted gray; width:330px;}
+		#input,#result
+		{text-align:center;}
+		p
+		{font-size:0.9em; margin:10px;}
+		h4
+		{margin-bottom:5px;}	
+	</style>
+</head>
+<body>
+<fieldset id="main">
+	<legend>회원 가입</legend>
+<fieldset>
+	<legend id="input">입력 정보</legend>
+	<article>	
+		<input type="text" id="name" placeholder="이름을 입력해주세요">
+			<hr>
+		<input type="text" id="mail" placeholder="이메일 주소를 입력해주세요">		
+			<hr>
+			<h4>최종학력을 선택해주세요</h4>
+		<select id="class">
+			<option>유치원</option>
+			<option>초등학교</option>
+			<option>중학교</option>
+			<option>고등학교</option>
+			<option>대학교</option>
+			<option>대학원</option>
+		</select>
+		<hr>
+	<h4>좋아하는 애완동물을 선택해주세요.</h4>
+		<input type="radio" name="pet" value="강아지">
+			<span>강아지</span>
+		<input type="radio" name="pet" value="고양이">
+			<span>고양이</span>
+		<input type="radio" name="pet" value="햄스터">
+			<span>햄스터</span>
+		<input type="radio" name="pet"	value="기타종류">
+			<span>기타</span>
+		
+		<hr>
+	<h4>좋아하는 음식 스타일을 선택해주세요.</h4>
+		<input type="checkbox" name="check1" value="한식">
+			<span>한식</span>
+		<input type="checkbox" name="check2" value="일식">
+			<span>일식</span>
+		<input type="checkbox" name="check3" value="중식">
+			<span>중식</span>
+		<input type="checkbox" name="check4" value="양식">
+			<span>양식</span>
+		<hr>
+	</article>
+</fieldset>
+<fieldset>
+	<legend id="result">출력 정보</legend>
+		<p>이름 : <b><span class="name"></span></b></p>		
+		<p>이메일 : <b><span class="mail"></span></b></p>
+		<p>최종학력 : <b><span class="class"></span></b></p> 
+		<p>좋아하는 애완동물 : <b><span id="pet"></span></b></p>
+	<p>좋아하는 음식 스타일 : <b><span id="food"></span></b></p>	
+</fieldset>
+</fieldset>
+</body>
+</html>

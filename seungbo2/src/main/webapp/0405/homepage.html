@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+	<style>
+		*{margin:0px; padding:0px;}
+		body
+		{width:max; height:auto;}
+		#banner
+		{width:100%;}
+		#login
+		{float:right;}
+		#login ul li
+		{list-style:none; display:inline-block;}
+		#login ul li a
+		{text-decoration:none; color:#a7a9ac; font-size:13px;}
+		#login ul li a:hover
+		{color:red;}
+		hr
+		{width:100%;}
+		#home
+		{float:left; margin-left:50px;}
+		#home ul li
+		{list-style:none; display:inline-block; margin:10px 15px;}
+		#home ul li a
+		{text-decoration:none; color:#808285; font-size:15px;}
+		#home ul li a:hover
+		{color:red;}
+		#cart
+		{width:30px; margin-bottom:-10px;}
+		#search
+		{float:right;}
+		#cateimg
+		{margin-bottom:-5px;}
+		#banner2
+		{width:100%;}
+		.h
+		{font-size:40px; color:#683b28; text-align:center;}
+		#cart2
+		{float:right;}
+		.h ul
+		{list-style:none; margin:0px; padding:0px; text-align:center;}
+		.h ul li
+		{display:inline-block; margin-right:20px;}
+		.bread-container 
+		{display: inline-block;
+		text-align: center;
+		width: 300px;
+		margin: 0px 10px;}
+		.bread
+		{width: 100%;}
+		.bread img
+		{vertical-align: middle;}
+		#top
+		{float:right; margin-right:-50px;}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="../images/banner.jpg" id="banner">
+			<nav id="login">
+				<ul>
+					<li><a href="#">회원가입｜</a>
+					<li><a href="#">로그인｜</a>
+					<li><a href="#">주문배송조회｜</a>
+					<li><a href="#">고객센터</a>
+				</ul>				
+			</nav>
+	</header>
+		<hr>
+	<section>
+		<article>
+			<nav id="home">
+				<ul>
+					<li id="category"><img src="../images/category.JPG" id="cateimg">전체 카테고리</li>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">신상품</a></li>
+					<li><a href="#">배송선택</a></li>
+					<li><a href="#">기프티콘주문</a></li>	
+				</ul>							
+			</nav>
+			<nav id="search">
+				<input type="search"><img src="../images/cart.JPG" id="cart">
+			</nav>
+		</article>
+		<article>
+			<img src="../images/banner2.JPG" id="banner2">
+		</article>
+		<article id="top">
+		<img src="../images/top.JPG">
+		</article>
+		<hr>
+		<article>
+			<h1 class="h">섬심당 특산품</h1>
+				<ul>
+					<li class="bread-container"><div><span><img src="../images/bread1.png" class="bread">튀소 세트<img src="../images/cart2.png" class="cart2"></span><br>10,000원</div></li>
+					<li class="bread-container"><div><span><img src="../images/bread2.jpg" class="bread">튀소패밀리(튀소2,구마2,초코2)<img src="../images/cart2.png" class="cart2"></span><br>10,800원</div></li>
+					<li class="bread-container"><div><span><img src="../images/bread3.png" class="bread">반반세트<img src="../images/cart2.png" class="cart2"></span><br>11,000원</div></li>
+					<li class="bread-container"><div><span><img src="../images/bread4.png" class="bread">형제세트<img src="../images/cart2.png" class="cart2"></span><br>10,000원</div></li>
+				</ul>
+		</article>
+	</section>
+</body>
+</html>

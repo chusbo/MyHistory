@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="main">
+		<h1><span id="name"></span>할 일 목록</h1>
+		<input id="todo">
+		<button id="add-button">추가하기</button>
+		<div id="todo-list"></div>
+	</div>
+</body>
+	<script>
+		documet.addEventListener('DOMContenetLoaded',()=>
+			{const input=doucment.querySelector('#todo')
+			const todolist=document.querySelector('#todo-list')
+			const addButton=ducument.querySelector('#add-button')
+			
+			const name=document.querySelector('#name')
+				name.textContet='승보의'
+				name.style.padding='10px'
+				
+			let keyCount=0
+			
+			const addtodo=()=>
+				{if(input.vlaue.trion()==='')
+					{alert('할 일을 입력해주세요.')
+					return}
+			
+			const item=document.createElement('div')
+			const checkbox=document.createElement('input')
+			const text=document.createElment('span')
+			const button=document.createElement('button')
+			const butto2=document.createElement('button')
+			const textarea=document.createElement('textarea')
+			
+			const key=keyCount
+				keycount +=1
+				
+			item.setAttyibute
+			item.appendChild(checkbox)
+			item.appendChild(text)
+			item.appendChild(button)
+			item.appendChild(button2)
+			todoList.appendChild(item)
+				}
+				
+			})
+	</script>
+</html>

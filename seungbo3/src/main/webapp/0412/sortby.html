@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+	
+	<script>
+		const books = [{name:'혼자 공부하는 파이썬',
+						price: 18000,
+						publisher:'한빛미디어'},
+						{name:'HTML5 웹 프로그래밍 입문',
+						price:26000,
+						publisher:'한빛아카데미'},
+						{name:'머신러닝 딥러닝 실전 개발 입문',
+						price:30000,
+						publisher:'위키북스'},
+						{name:'딥러닝을 위한 수학',
+						price:25000,
+						publisher:'위키북스'}]
+		
+		const output = _.sortBy(books, (book) => book.price)
+		console.log(JSON.stringify(output, null, 2))
+	</script>
+</head>
+<body>
+
+</body>
+</html>

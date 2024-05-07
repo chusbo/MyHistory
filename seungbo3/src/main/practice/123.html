@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded',()=>
+			{const mail=document.querySelector('#mail')
+			const mail2=document.querySelector('.mail')
+			const isEmail=(value)=>
+			{return(value.indexOf('@')>1)
+			&&(value.split('@')[1].indexOf('.')>1)}
+		
+		mail.addEventListener('keyup',(event)=>
+			{const value=event.currentTarget.value
+			if(isEmail(value))
+			{mail2.style.color='green'
+			mail2.textContent=`이메일 형식입니다:${value}`}
+			else
+			{mail2.style.color='red'
+			mail2.textContent=`이메일 형식이 아닙니다:${value}`}
+		})			
+	})
+		document.addEventListener('DOMContentLoaded',()=>
+			{const class1=document.querySelector('#class')
+			const class2=document.querySelector('.class')
+			
+			class1.addEventListener('change',(event)=>
+				{const options=event.currentTarget.options
+				const index=event.currentTarget.options.selectedIndex
+				
+			class2.textContent=`최종학력:${options[index].textContent}`
+		})
+	})
+		document.addEventListener('DOMContentLoaded',()=>
+			{const pet=document.querySelector('#pet')
+			const radios=document.querySelectorAll('[name=pet]')
+			
+			radios.forEach((radio)=>
+				{radio.addEventListener('change',(event)=>
+					{const current=event.currentTarget
+						if(current.checked)
+						{pet.textContent=`좋아하는 애완동물은 ${current.value}이시군요.`}
+					})
+				})
+			})
+		document.addEventListener('DOMContentLoaded', () => {
+    		const food = document.querySelector('#food')
+    		const checkboxes = document.querySelectorAll('[name^=check]') // [name^=check]는 name 속성이 'check'로 시작하는 모든 요소를 선택합니다.
+
+    		checkboxes.forEach((checkbox) => {
+        	checkbox.addEventListener('change', () => {
+	            let selectedFoods = []
+    	        checkboxes.forEach((checkbox) => {
+        	        if (checkbox.checked) {
+                    selectedFoods.push(checkbox.value)}
+            	});
+            food.textContent = `선택한 음식 스타일: ${selectedFoods.join(', ')}`
+            })
+    })
+})
+	</script>
+	<style>
+		div
+		{border:1px dotted gray; width:330px;}
+		
+	</style>
+</head>
+<body>
+<div>
+	<h3><input type="text" id="name" placeholder="이름을 입력해주세요"></h3>
+		<hr>
+	<input type="text" id="mail" placeholder="메일을 입력해주세요"><br>
+		
+		<hr>
+		<h3>최종학력을 선택해주세요</h3>
+	<select id="class">
+		<option>유치원</option>
+		<option>초등학교</option>
+		<option>중학교</option>
+		<option>고등학교</option>
+		<option>대학교</option>
+		<option>대학원</option>
+	</select>
+		
+		<hr>
+	<h3>좋아하는 애완동물을 선택해주세요.</h3>
+		<input type="radio" name="pet" value="강아지">
+			<span>강아지</span>
+		<input type="radio" name="pet" value="고양이">
+			<span>고양이</span>
+		<input type="radio" name="pet" value="햄스터">
+			<span>햄스터</span>
+		<input type="radio" name="pet"	value="기타종류">
+			<span>기타</span>
+		
+		<hr>
+	<h3>좋아하는 음식 스타일을 선택해주세요.</h3>
+		<input type="checkbox" name="check1" value="한식">
+			<span>한식</span>
+		<input type="checkbox" name="check2" value="일식">
+			<span>일식</span>
+		<input type="checkbox" name="check3" value="중식">
+			<span>중식</span>
+		<input type="checkbox" name="check4" value="양식">
+			<span>양식</span>
+	
+</div>
+<div id="div">
+이메일: <p class="mail"></p>
+최종학력: <p class="class"></p>
+좋아하는 애완동물:<p id="pet"></p>
+좋아하는 음식 스타일:<p id="food"></p>
+</div>
+</body>
+</html>

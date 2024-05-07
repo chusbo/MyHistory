@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => 
+			{const name1=document.querySelector('#name')
+    		const name2=document.querySelector('.name')
+
+    		name1.addEventListener('keyup', (event) =>
+    		{const name3=event.currentTarget.value
+    		name2.textContent = name3})
+			})//이름
+
+		document.addEventListener('DOMContentLoaded', () => 
+			{const kor1=document.querySelector('#kor')
+    		const kor2=document.querySelector('.kor')
+
+    		kor1.addEventListener('keyup', (event) =>
+    		{const kor3=event.currentTarget.value
+    		kor2.textContent = `${kor3}점`})
+			})//국어
+	
+		document.addEventListener('DOMContentLoaded', () => 
+			{const eng1=document.querySelector('#eng')
+    		const eng2=document.querySelector('.eng')
+
+    		eng1.addEventListener('keyup', (event) =>
+    		{const eng3=event.currentTarget.value
+    		eng2.textContent = `${eng3}점`})
+			})//영어
+			
+		document.addEventListener('DOMContentLoaded', () => 
+			{const math1=document.querySelector('#math')
+    		const math2=document.querySelector('.math')
+
+    		math1.addEventListener('keyup', (event) =>
+    		{const math3=event.currentTarget.value
+    		math2.textContent = `${math3}점`})
+			})//수학
+			
+		document.addEventListener('DOMContentLoaded', () => 
+			{const csi1=document.querySelector('#csi')
+    		const csi2=document.querySelector('.csi')
+
+    		csi1.addEventListener('keyup', (event) =>
+    		{const csi3=event.currentTarget.value
+    		csi2.textContent = `${csi3}점`})
+			})//과학
+
+		document.addEventListener('DOMContentLoaded', () => 
+			{const sum1=document.querySelector('.sum')
+
+    			sum1.addEventListener('keyup', (event) =>
+    		{const getsum=event.currentTarget.value
+				sum1.textContent=`${getSum()}`})})	
+			  
+		class student
+			{constructor(kor1,eng1,math1,csi1)
+				{this.국어=kor1
+				this.영어=eng1
+				this.수학=math1
+				this.과학=csi1}				
+			
+		getSum()
+			{return this.국어+this.영어+this.수학+this.과학}
+	
+		getAverage()
+			{return this.getSum()/4}
+	
+		toString()
+			{return `${this.getSum()}점\n${this.getAverage()}점\n`}}
+	
+		const students=[]
+		students.push(new student('#kor','#eng','#math','#csi'))
+		
+		let output='총점\n평균\n'
+			for(const s of students)
+				{output +=s.toString()}
+		
+		document.write(output)
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>성적관리 프로그램</legend>
+		<p>이름 : <input type="text" id="name"></p>
+		<p>국어점수 : <input type="number" min="0" max="100" id="kor"></p>
+		<p>영어점수 : <input type="number" min="0" max="100" id="eng"></p>
+		<p>수학점수 : <input type="number" min="0" max="100" id="math"></p>
+		<p>과학점수 : <input type="number" min="0" max="100" id="csi"></p>
+	</fieldset>
+	<fieldset>
+		<legend>출력</legend>
+		<p>이름 : <b><span class="name"></span></b></p>
+		<p>국어점수 : <b><span class="kor"></span></b></p>
+		<p>영어점수 : <b><span class="eng"></span></b></p>
+		<p>수학점수 : <b><span class="math"></span></b></p>
+		<p>과학점수 : <b><span class="csi"></span></b></p>
+		<p>총합점수 : <b><span class="sum"></span></b></p>
+		<p>평균점수 : <b><span class="ave"></span></b></p>
+	</fieldset>
+</body>
+</html>
