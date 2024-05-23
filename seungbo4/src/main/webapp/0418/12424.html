@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<style>
+		*{margin:0px; padding:0px;}
+		body
+		{width:max; height:auto;}
+		#banner
+		{width:100%;}
+		#login
+		{float:right;}
+		#login ul li
+		{list-style:none; display:inline-block;}
+		#login ul li a
+		{text-decoration:none; color:#a7a9ac; font-size:13px;}
+		#login ul li a:hover
+		{color:red;}
+		hr
+		{width:100%;}
+		#home
+		{float:left; margin-left:200px;}
+		#home ul li
+		{list-style:none; display:inline-block; margin:10px 15px;}
+		#home ul li a
+		{text-decoration:none; color:#808285; font-size:15px;}
+		#home ul li a:hover
+		{color:red;}
+		#cart
+		{width:30px; margin-bottom:-10px;}
+		#search
+		{float:right; margin-top:10px;}
+		#banner2
+		{width:100%;}
+		.h
+		{font-size:40px; color:#683b28; text-align:center;}
+		#cart2
+		{float:right;}
+		.bread-container 
+		{display:inline-block;	text-align:center;	width:300px; margin:0px 10px; font-size:18px; font-weight:bold;}
+		.bread
+		{width:100%;}
+		.bread img
+		{vertical-align:middle;}
+		#top
+		{float:right; margin-right:-50px;}
+		p.cash
+		{size:22px; font-weight:bold; color:#683b28;}
+		#middle2
+		{background-color:#ebe0d2;}
+		
+		#drop
+			{text-align:center; margin-left:800px;}
+		/* 드롭다운 버튼 스타일 */
+		.dropdown .btn {
+    		background-color: white; /* 배경색 */
+    		color: #683b28; /* 글꼴색 */
+    		border: none; /* 테두리 없앰 */
+			}
+
+		/* 드롭다운 메뉴 아이템 스타일 */
+		.dropdown-menu .dropdown-item {
+  		  font-size: 14px; /* 글꼴 크기 */
+    		color: #683b28; /* 아이템 글꼴색 */
+			}
+
+		/* 드롭다운 메뉴 아이템 호버 스타일 */
+			.dropdown-menu .dropdown-item:hover {
+ 			   background-color: #f8f9fa; /* 호버 배경색 */
+			}
+		#middle1,#middle2,#middle3
+		{text-align:center;}
+		#banner4
+		{text-align:center;}
+		.insta
+		{display:inline;}
+		#insta1,#insta2
+		{color:#683b28}
+		#insta2
+		{margin-top:50px;}
+		#fam
+		{text-align:center;}
+		#fam img
+		{width:181px; margin:10px;}
+		#foot
+		{text-align:center; background-color:#f5f3ee; margin-top:30px;}
+		#foot2
+		{color:#683b28; display:inline-block; margin-left:50px;}
+		#foot2 a
+		{text-decoration:none; color:#87553D; font-size:20px;}
+		#foot2 button
+		{border:2px solid #87553D; padding:12px; border-radius:5px; width:200px; margin-bottom:10px;}
+		#ff
+		{background-color:#87553D;}
+		#ff div
+		{display:inline; margin:10px;}
+		#ff div a, #ff div p
+		{text-decoration:none; color:white;}
+		#ff div h5
+		{color:white}
+		#hr
+		{border:1px solid white; margin:0px;}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="../images/logo.jpg" id="banner">
+			<nav id="login">
+				<ul>
+					<li><a href="#">회원가입｜</a>
+					<li><a href="#">로그인｜</a>
+					<li><a href="#">주문배송조회｜</a>
+					<li><a href="#">고객센터</a>
+				</ul>				
+			</nav>
+	</header>
+		<hr>
+	<section>
+			<div>
+			<nav id="home">
+				<ul>
+					<li id="category"><a href="#"><img src="../images/category.JPG" id="cateimg">전체 카테고리</a></li>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">베스트</a></li>
+					<li><a href="#">신상품</a></li>
+					<li><a href="#">배송선택</a></li>
+					<li><a href="#">기프티콘주문</a></li>	
+				</ul>							
+			</nav>
+			</div>
+	     <div class="ms-lg-auto d-flex" id="search">
+     		 <form class="d-flex" role="search">
+     		   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+     	   <button class="btn btn-outline-success" type="submit">Search</button>
+     	   <button class="btn btn-outline-success" type="submit"><img src="../images/cart.JPG"></button>
+    	  </form>
+      </div>
+		<article>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="../images/banner1.JPG" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="../images/banner2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/banner3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+ 		   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+ 		   <span class="visually-hidden">Previous</span>
+ 	 </button>
+  	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+   		 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   		 <span class="visually-hidden">Next</span>
+  	</button>
+	</div>
+		</article>
+		<article id="top">
+		<img src="../images/top.JPG">
+		</article>
+		<hr>
+	<div class="dropdown" id="drop">
+ 		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  			  인기 검색어
+  			</button>
+  				<ul class="dropdown-menu">
+  				  <li><a class="dropdown-item" href="#">1 케이크</a></li>
+  				  <li><a class="dropdown-item" href="#">2 마들렌</a></li>
+   				 <li><a class="dropdown-item" href="#">4 롤</a></li>
+   				 <li><a class="dropdown-item" href="#">5 소금빵</a></li>
+   				 <li><a class="dropdown-item" href="#">6 순수롤</a></li>
+   				 <li><a class="dropdown-item" href="#">7 튀김</a></li>
+   				 <li><a class="dropdown-item" href="#">8 약과</a></li>
+   				 <li><a class="dropdown-item" href="#">9 합격세트</a></li>
+   				 <li><a class="dropdown-item" href="#">10 튀소</a></li>
+ 				 </ul>
+	</div>
+		<article id="middle1">
+			<h1 class="h">섬심당 특산품</h1>
+				<ul>
+					<li class="bread-container"><div><span><img src="../images/bread1.png" class="bread">튀소 세트<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">10,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread2.jpg" class="bread">튀소패밀리(튀소2,구마2,초코2)<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">10,800원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread3.png" class="bread">반반세트<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">11,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread4.png" class="bread">형제세트<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">10,000원</p></div></li>
+				</ul>
+		</article>
+		<article id="middle2">
+			<h1 class="h">섬심당 베스트</h1>
+				<ul>
+					<li class="bread-container"><div><span><img src="../images/bread1.png" class="bread">보문산메아리<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">6,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread2.jpg" class="bread">순수롤<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">14,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread3.png" class="bread">약과전병세트<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">24,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread4.png" class="bread">순수마들렌<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">12,000원</p></div></li>
+				</ul>
+		</article>
+		<article id="middle3">
+			<h1 class="h">섬심당 신상품</h1>
+				<ul>
+					<li class="bread-container"><div><span><img src="../images/bread1.png" class="bread">마그넷(자석/식품아님)<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">8,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread2.jpg" class="bread">곰식이양말<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">10,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread3.png" class="bread">곰식이 그립톡<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">8,000원</p></div></li>
+					<li class="bread-container"><div><span><img src="../images/bread4.png" class="bread">곰식이 페브(도자기)<img src="../images/cart2.png" class="cart2"></span><br><p class="cash">8,000원</p></div></li>
+				</ul>
+		</article>
+		<hr>
+		<div id="banner4">
+			<img src="../images/banner4.png">
+		</div>
+		<hr>
+		<div id="insta1">
+			<span><img src="../images/insta.png"><h3 class="insta">인스타그램</h3>@ungsimadang_official</span>
+		</div>
+		<div id="insta2">
+			<span><img src="../images/insta.png"><h3 class="insta">패밀리 브랜드 인스타그램</h3></span>
+		</div>
+		<div id="fam">
+			<img src="../images/fam1.png" name="fam">
+			<img src="../images/fam2.png" name="fam">
+			<img src="../images/fam3.png" name="fam">
+			<img src="../images/fam4.png" name="fam">
+			<img src="../images/fam5.png" name="fam">
+			<img src="../images/fam6.png" name="fam">
+		</div>
+	<footer id="foot">
+		<div id="foot2">
+			<h4>고객센터</h4>
+			<h3>1588-8069 (유료)</h3>
+			<h5>AM 9:00 - pm 17:00 (점심시간 12:00-13:00)</h5>
+		</div>
+		<div id="foot2">
+			<button><a href="#">1:1문의하기</a></button><br>
+			<button><a href="#">FAQ 바로가기</a></button>
+		</div>
+		<div id="foot2">
+			<h4>공지사항</h4>
+				<h5>2024 설 택배 마감				2024-01-31</h5>
+				<hr>
+				<h5>성심당 외국산 재료 원산지 표기..		2023-06-07</h5>
+				<hr>
+				<h5>아이스팩(보냉포장)유료화 전환..		2023-02-28</h5>
+				<hr>
+				<h5>크리스마스케익 예약(방문 및 배..		2022-12-12</h5>
+		</div>
+		<div>
+		</div>
+	</footer>
+	<footer id="ff">
+	<div>
+		<p><span><a href="#">회사 소개</a> | 
+		<a href="#">매장안내</a> | 
+		<a href="#">이용약관</a> | 
+		<a href="#">고객센터</a> | 
+		<a href="#">개인정보처리방침</a></p>
+	</div>
+	<hr id="hr">
+	<div>
+		<p>대표:*** 법인명:** 주식회사 전화번호:1588-8069(유료) E-mail:naver.com</p>
+	</div>
+	</footer>
+	</section>
+</body>
+</html>

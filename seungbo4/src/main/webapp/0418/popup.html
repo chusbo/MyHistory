@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<body bgcolor="#6D201B" style="margin:0px; overflow:hidden;">
+<table border="0" cellpadding="0" cellspacing="0" width="500"><tbody><tr height="500"><td align="center" valign="top"><a href="https://www.sungsimdang.co.kr/" target="siteBody" onclick="closePopup();"><img src="https://www.sungsimdangmall.co.kr/data/sungsimdang/popup/2023_성심당_홈페이지_리뉴얼_오픈_배너-01.png" border="0"></a></td></tr><tr height="20"><td align="right"><input type="checkbox" id="ispop" onclick="closePopup()" style="width:16px; height:16px;"><span style="color:#FFFFFF; margin-right:20px">오늘 이창 띄우지 않음</span><img src="https://www.sungsimdangmall.co.kr/data/sungsimdang/button/btn_close_popup.gif" align="absmiddle" onclick="closePopup()" style="cursor:pointer; margin-right:5px;"></td></tr></tbody></table>
+
+
+<script type="text/javascript">
+  var vSwiper = $('.slpop_con').swiper({
+	loop: true,
+	autoplay: 2000,
+	pagination : '.slpop .swpPaging',
+	paginationClickable :true,
+	onSlideChangeStart: function(swiper){
+	  $(".slpop_paging li").removeClass("on");
+	  $(".slpop_paging li").eq(swiper.activeLoopIndex).addClass("on");
+	},
+	onFirstInit: function(swiper){
+	  $(".slpop_paging li").eq(0).addClass("on");
+	  //bind paging click
+	  $(".slpop_paging li").each(function(index){
+		$(this).hover(function(){
+		  $(".slpop .swpPaging span").eq(index).click();
+		});
+	  });
+	  //prev next
+	  $(".slpopWrap .prev").click(function(){
+		swiper.swipePrev();
+	  });
+	  $(".slpopWrap .next").click(function(){
+		swiper.swipeNext();
+	  });
+	}
+  });
+
+</script>
+
+</body>
+</body>
+</html>
